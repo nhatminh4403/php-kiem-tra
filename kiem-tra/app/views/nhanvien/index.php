@@ -5,11 +5,11 @@
     <thead>
         <tr>
             <th>Mã NV</th>
-            <th>Tên NV</th>
+            <th class="header-tag">Tên NV</th>
             <th>Giới tính</th>
-            <th>Nơi Sinh</th>
-            <th>Tên Phòng</th>
-            <th>Lương</th>
+            <th class="header-tag">Nơi Sinh</th>
+            <th class="header-tag"> Tên Phòng</th>
+            <th class="header-tag">Lương</th>
             <?php if (isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin'): ?>
             <th>Action</th>
             <?php endif; ?>
@@ -19,7 +19,7 @@
         <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
         <tr>
             <td><?php echo $row['Ma_NV']; ?></td>
-            <td><?php echo $row['Ten_NV']; ?></td>
+            <td class="header-tag"><?php echo $row['Ten_NV']; ?></td>
             <td>
                 <?php if ($row['Phai'] == 'NU'): ?>
                     <img src="imgs/woman.jpg" alt="Nữ" width="50">
@@ -27,9 +27,9 @@
                     <img src="imgs/man.jpg" alt="Nam" width="50">
                 <?php endif; ?>
             </td>
-            <td><?php echo $row['Noi_Sinh']; ?></td>
-            <td><?php echo $row['Ten_Phong']; ?></td>
-            <td><?php echo $row['Luong']; ?></td>
+            <td class="header-tag"><?php echo $row['Noi_Sinh']; ?></td>
+            <td class="header-tag"><?php echo $row['Ten_Phong']; ?></td>
+            <td class="header-tag"> <?php echo $row['Luong']; ?></td>
             <?php if (isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin'): ?>
             <td>
                 <a href="index.php?controller=nhanvien&action=edit&id=<?php echo $row['Ma_NV']; ?>" class="btn btn-sm btn-warning">Sửa</a>

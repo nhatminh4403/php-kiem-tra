@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản lý nhân sự</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Tùy chỉnh thêm nếu cần */
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+        .nav-link {
+            font-size: 1rem;
+        }
+        @media (max-width: 576px) {
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+            .nav-link {
+                font-size: 0.9rem;
+            }
+        }
+        @media (max-width: 450px) {
+            .header-tag {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
